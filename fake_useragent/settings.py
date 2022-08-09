@@ -4,7 +4,9 @@ from __future__ import absolute_import, unicode_literals
 import os
 import tempfile
 
-__version__ = '0.1.11'
+__version__ = '0.1.12'
+
+cache_version = '0.1.11'
 
 DB = os.path.join(
     tempfile.gettempdir(),
@@ -14,7 +16,7 @@ DB = os.path.join(
 )
 
 CACHE_SERVER = 'https://fake-useragent.herokuapp.com/browsers/{version}'.format(  # noqa
-    version=__version__,
+    version=cache_version,
 )
 
 BROWSERS_STATS_PAGE = 'https://www.w3schools.com/browsers/default.asp'
